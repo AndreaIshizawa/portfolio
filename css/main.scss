@@ -1,1 +1,7 @@
-@import "settings, tools, generic, base, objects, components, trumps";
+@import "settings/main.scss";
+@import "tools/main.scss";
+@import "generic/main.scss";
+@import "base/main.scss";
+@import "objects/main.scss";
+@import "components/main.scss";
+@import "trumps/main.scss"; 
