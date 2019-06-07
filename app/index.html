@@ -49,7 +49,7 @@
         <section class="container --content --bg">
             <div id="particles-js" class="particles"></div>
 
-                <p class="welcome">Olá, sejam bem vindos!</p>
+                <p><span class="welcome"></span></p>
                 <p>Sou web designer apaixonada pelo front-end. Desde 2016 venho atuando como freelancer e desenvolvendo sites institucionais e de e-commerce. Estou sempre buscando novas idéias para aplicar em meus trabalhos e me atualizando nas novas tecnologia em front-end.
                 </p>
 
@@ -66,6 +66,16 @@
     <script src="js/script.js"></script>
     <script src="js/particles.js"></script>
     <script src="js/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
+
+    <script type="text/javascript">
+    
+        var typed = new Typed('.welcome', {
+            strings: ["Olá, sejam bem vindos! "],
+            typeSpeed: 30
+        });
+
+    </script>
 
 </body>
 
