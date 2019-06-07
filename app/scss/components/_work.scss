@@ -1,0 +1,16 @@
+.work-section{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 50px
+}
+
+.work{
+    width: 400px;
+    text-align: center;
+
+    > .img{
+        width: 100%;
+        border: 15px solid #fff;
+        box-shadow: 0 10px 30px -30px #000;
+    }
+}

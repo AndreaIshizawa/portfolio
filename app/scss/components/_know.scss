@@ -1,0 +1,84 @@
+.know{
+	display: flex;
+	flex-wrap: wrap;
+
+	&.--margin{
+		width: 400px;
+		margin-top: 40px;
+	}
+}
+
+.circlebar{
+	width: 50%;
+	margin-bottom: 30px;
+	text-align: center;
+}
+
+
+.circle-percent {
+	font-size: 90px;
+	width: 1em;
+	height: 1em;
+	position: relative;
+	background: #eee;
+	border-radius: 50%;
+	overflow: hidden;
+	display: inline-block;
+}
+
+.circle-inner {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 1em;
+	height: 1em;
+	clip: rect(0 1em 1em .5em);
+}
+
+.round-per {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 1em;
+	height: 1em;
+	background: $primary;
+	clip: rect(0 1em 1em .5em);
+	transform: rotate(180deg);
+	transition: 1.05s;
+}
+
+.percent_more .circle-inner {
+	clip: rect(0 .5em 1em 0em);
+}
+
+.percent_more:after {
+	position: absolute;
+	left: .5em;
+	top: 0em;
+	right: 0;
+	bottom: 0;
+	background: $primary;
+	content: '';
+}
+
+.circle_inbox {
+	position: absolute;
+	top: 15px;
+	left: 15px;
+	right: 15px;
+	bottom: 15px;
+	background: #fff;
+	z-index: 3;
+	border-radius: 50%;
+}
+
+.percent_text {
+	position: absolute;
+    font-size: 20px;
+    font-weight: 500;
+    color: $gray;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 3;
+}

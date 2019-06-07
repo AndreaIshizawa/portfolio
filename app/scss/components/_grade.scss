@@ -1,0 +1,5 @@
+@import "exp.scss";
+
+.grade{
+    @extend .exp;
+}

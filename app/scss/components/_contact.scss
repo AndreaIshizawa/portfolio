@@ -1,0 +1,16 @@
+.contact{
+    display: flex;
+    justify-content: space-evenly;
+    width: 70%;
+    margin: auto;
+}
+
+.contact-info{
+    font-size: 16px;
+
+    > .img{
+        width: 20px;
+        vertical-align: middle;
+        margin-right: 2px;
+    }
+}

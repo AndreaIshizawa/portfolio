@@ -1,20 +1,36 @@
 body{
     font-family: 'Prompt', sans-serif;
-    background-color: $light-gray;
+    background-color: $bg;
     font-size: 18px;
-    font-weight: 200;
+    font-weight: 300;
+    line-height: 26px;
     color: $black;
 }
 
-p{
-    margin: 5px 0;
+p, li{
+    margin: 10px 0;
+}
+
+ul > li::before{
+    content: '- ';
 }
 
 a{
     text-decoration: none;
     color: $black;
+    transition: all ease 0.3s;
 
     &:hover{
         color: $link;
+        transition: all ease 0.3s;
     }
+}
+
+footer{
+    position: fixed;
+    bottom: 15px;
+    left: 15px;
+    color: $light-gray;
+    font-size: 16px;
+    z-index: 1;;
 }

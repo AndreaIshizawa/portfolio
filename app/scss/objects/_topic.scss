@@ -1,0 +1,25 @@
+.topic{
+    margin-bottom: 45px;
+
+    > .title{
+        color: $primary;
+        font-size: 22px;
+        font-weight: 300;
+        text-transform: uppercase;
+        margin-bottom: 15px;
+        
+        &::before{
+            content: '';
+            display: inline-block;
+            width: 20px;
+            height: 1px;
+            background-color: $primary;
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+    }
+
+    > .content{
+        margin-bottom: 50px;
+    }
+}

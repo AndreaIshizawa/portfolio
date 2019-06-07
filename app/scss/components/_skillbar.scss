@@ -1,0 +1,25 @@
+.skill{
+    margin-bottom: 15px;
+
+    > .name{
+        margin-bottom: 5px;
+    }
+}
+
+.skillbar{
+    width: 350px;
+    background-color: lighten($gray, 45%);
+}
+
+.bar {
+    width: 0;
+    height: 15px;
+    background: linear-gradient(90deg, $primary 0%, saturate($primary, 15%));
+    text-align: right;
+    box-sizing: border-box;
+
+    > .num{
+        font-size: 14px;
+        line-height: 0;
+    }
+}
