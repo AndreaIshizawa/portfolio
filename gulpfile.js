@@ -61,7 +61,7 @@ gulp.task("server", function() {
   gulp.watch("app/**/*").on("change", browserSync.reload);
   gulp.watch("app/*.html", ["html"]);
   gulp.watch("app/scss/**/*.scss", ["sass"]);
-  gulp.watch("app/js/**/*.js", ["required-js"]);
+  gulp.watch("app/js/**/*.js", ["js"]);
   gulp.watch("app/img/**/*.*", ["img"]);
 });
 
