@@ -34,3 +34,21 @@ $(".circle-percent").each(function() {
 		},1000);
 	} 
 });
+
+//hover
+var btn = document.querySelectorAll('[data-hover="hover"]');
+(function(){
+	btn.forEach(function(event){
+		
+		event.addEventListener("mouseenter", function(event){
+			(this).classList.add('--select');
+		});
+
+		event.addEventListener("mouseleave", function(){
+			(this).classList.remove('--select');
+		});
+	
+	
+		
+	});
+})();
