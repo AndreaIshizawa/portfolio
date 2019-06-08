@@ -5,6 +5,10 @@
 	&.--margin{
 		width: 400px;
 		margin-top: 40px;
+
+		@include media($mobile){
+			width: 100%;
+		}
 	}
 }
 

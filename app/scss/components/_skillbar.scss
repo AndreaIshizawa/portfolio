@@ -9,6 +9,10 @@
 .skillbar{
     width: 350px;
     background-color: lighten($gray, 45%);
+
+    @include media($mobile){
+        width: 100%;
+    }
 }
 
 .bar {

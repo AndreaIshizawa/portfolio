@@ -1,16 +1,38 @@
 .work-section{
     display: flex;
     justify-content: space-evenly;
-    margin-top: 50px
+    margin-top: 50px;
+
+    @include media($mobile){
+        flex-direction: column;
+        margin-top: 0;
+    }
 }
 
 .work{
     width: 400px;
     text-align: center;
 
+    @include media($mobile){
+        width: 100%;
+        margin-bottom: 60px;
+    }
+
     > .img{
         width: 100%;
         border: 15px solid #fff;
         box-shadow: 0 10px 30px -30px #000;
+        transition: all ease 0.5s;
+        border-radius: 3px;
+        opacity: 0.6;
+        box-sizing: border-box;
+    }
+}
+
+.work.--select{
+    > .img{
+        box-shadow: 0 0px 30px -20px #000;
+        opacity: 1;
+        transition: all ease 0.5s;
     }
 }

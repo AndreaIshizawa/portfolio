@@ -3,6 +3,11 @@
     justify-content: space-evenly;
     width: 70%;
     margin: auto;
+
+    @include media($mobile){
+        width: 100%;
+        flex-direction: column;
+    }
 }
 
 .contact-info{

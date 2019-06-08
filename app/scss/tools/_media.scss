@@ -1,0 +1,9 @@
+$mobile: '(max-width:480px)';
+$tablet: '(min-width: 768px)';
+$desktop: '(min-width: 1200px)';
+
+@mixin media ($media) {
+    @media all and #{$media}{
+        @content;
+    }
+}
