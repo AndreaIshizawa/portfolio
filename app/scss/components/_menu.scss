@@ -20,14 +20,24 @@
     > .img{
         width: 40px;
         margin-bottom: 10px;
+        transition: all ease 0.5s;
     }
 
     > .txt{
-        text-transform: uppercase;
-        font-weight: 400;
+        color: $menu;
+        transition: all ease 0.5s;
+    }
+}
+
+.button-menu.--select{
+    > .img path{
+        fill: $primary;
+        transition: all ease 0.5s;
     }
 
-    &:hover{
-        color: $link;
+    > .txt{
+        color: $primary;
+        transition: all ease 0.5s;
     }
+
 }
