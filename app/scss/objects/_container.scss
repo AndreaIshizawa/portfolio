@@ -63,7 +63,7 @@
             background-image: url("../img/bg.jpg");
         }
         
-        @include medi($desktop){
+        @include media($desktop){
             background-position: initial;
         }
     }
