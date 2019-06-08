@@ -1,12 +1,14 @@
 .contact{
     display: flex;
+    flex-direction: column;
     justify-content: space-evenly;
-    width: 70%;
+    flex-flow: column;
+    width: 100%;
     margin: auto;
-
-    @include media($mobile){
-        width: 100%;
-        flex-direction: column;
+    
+    @include media($desktop){
+        flex-flow: row;
+        width: 70%;
     }
 }
 

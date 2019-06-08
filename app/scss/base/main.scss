@@ -32,7 +32,7 @@ footer{
     left: 15px;
     color: $light-gray;
     font-size: 16px;
-    z-index: 1;
+    z-index: 20;
     
     @include media($mobile){
         position: absolute;

@@ -1,5 +1,6 @@
-$mobile: '(max-width:480px)';
-$tablet: '(min-width: 768px)';
+$mobile: '(min-width:480px)';
+$tablet-p: '(min-width: 768px)';
+$tablet-l: '(min-width: 992px)';
 $desktop: '(min-width: 1200px)';
 
 @mixin media ($media) {

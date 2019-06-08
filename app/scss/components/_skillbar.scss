@@ -10,7 +10,7 @@
     width: 350px;
     background-color: lighten($gray, 45%);
 
-    @include media($mobile){
+    @include media($desktop){
         width: 100%;
     }
 }
