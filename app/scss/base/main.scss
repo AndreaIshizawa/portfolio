@@ -1,14 +1,23 @@
+html { font-size: 62.5%; }
+
 body{
     font-family: 'Prompt', sans-serif;
     background-color: $bg;
-    font-size: 18px;
+    font-size: 1.8rem;
     font-weight: 300;
-    line-height: 24px;
+    line-height: 2.4rem;
     color: $black;
+}
+main{
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
 }
 
 p{
-    margin: 10px 0;
+    margin: 1rem 0;
 }
 
 ul > li::before{
@@ -28,14 +37,14 @@ a{
 
 footer{
     position: fixed;
-    bottom: 15px;
-    left: 15px;
+    bottom: 1.5rem;
+    left: 1.5rem;
     color: $light-gray;
-    font-size: 16px;
+    font-size: 1.6rem;
     z-index: 20;
     
     @include media($mobile){
         position: absolute;
-        bottom: 5px;
+        bottom: 0.5rem;
     }
 }

@@ -1,0 +1,13 @@
+.link-pdf{
+    font-size: 1.5rem;
+
+    > .img {
+        width: 2rem;
+        vertical-align: middle;
+        margin-right: 0.5rem;
+        
+        path{
+            fill: $primary;
+        }
+    }
+}

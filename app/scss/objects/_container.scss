@@ -1,16 +1,8 @@
-.main{
-    display: flex;
-    flex-wrap: wrap;
-    position: relative;
-    min-height: 100vh;
-    overflow: hidden;
-}
-
 .container{
     display: flex;    
     flex-flow: column;
     position: relative;
-    padding: 15px;
+    padding: 1.5rem;
     width: 100%;
     height: 100%;
     box-sizing: border-box;
@@ -20,16 +12,16 @@
         align-items: center;
         justify-content: center;
         width: 100%;
-        height: 80px;
+        height: 8rem;
         background-color: lighten($black, 65%);
-        background-image: url("../img/particle.png");
-        box-shadow: 0px -20px 50px 0 black;
+        box-shadow: 0rem -2rem 5rem 0 black;
         z-index: 10;
         
         @include media($tablet-l){
+            background-image: url("../img/particle.png");
             width: 28%;
             height: 100%;
-            box-shadow: -30px 0px 50px 0 black;
+            box-shadow: -3rem 0rem 5rem 0 black;
         }
     }
 
@@ -37,14 +29,14 @@
         position: relative;
         width: 100%;
         margin-left: 0;
-        padding: 15px;
-        padding-top: 95px;
+        padding: 1.5rem;
+        padding-top: 9.5rem;
         box-sizing: border-box;
         
         @include media($tablet-l){
             width: 72%;
             margin-left: 28%;
-            padding:15px 50px;
+            padding:1.5rem 5rem;
         }
     }
 

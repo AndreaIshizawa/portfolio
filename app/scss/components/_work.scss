@@ -1,4 +1,4 @@
-.work-section{
+.work{
     display: flex;
     justify-content: space-evenly;
     margin-top: 0;
@@ -6,39 +6,39 @@
     
     @include media($tablet-l){
         flex-direction: row;
-        margin-top: 50px;
+        margin-top: 5rem;
     }
-}
+        
+    .box{
+        width: 90%;
+        margin: auto;
+        margin-bottom: 6rem;
+        text-align: center;
+        
+        @include media($tablet-l){
+            margin-bottom: 0;
+        }
 
-.work{
-    width: 90%;
-    margin: auto;
-    margin-bottom: 60px;
-    text-align: center;
-    
-    @include media($tablet-l){
-        margin-bottom: 0;
+        @include media($desktop){
+            width: 100%;
+        }
+
+        > .img{
+            width: 100%;
+            border: 1.5rem solid #fff;
+            box-shadow: 0 1rem 3rem -3rem #000;
+            transition: all ease 0.5s;
+            border-radius: 3px;
+            opacity: 0.6;
+            box-sizing: border-box;
+        }
     }
 
-    @include media($desktop){
-        width: 100%;
-    }
-
-    > .img{
-        width: 100%;
-        border: 15px solid #fff;
-        box-shadow: 0 10px 30px -30px #000;
-        transition: all ease 0.5s;
-        border-radius: 3px;
-        opacity: 0.6;
-        box-sizing: border-box;
-    }
-}
-
-.work.--select{
-    > .img{
-        box-shadow: 0 0px 30px -20px #000;
-        opacity: 1;
-        transition: all ease 0.5s;
+    .box.--select{
+        > .img{
+            box-shadow: 0 0rem 3rem -2rem #000;
+            opacity: 1;
+            transition: all ease 0.5s;
+        }
     }
 }

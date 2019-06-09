@@ -3,66 +3,64 @@
     align-items: stretch;
     justify-content: space-evenly;
     width: 100%;
-    margin-top: 0px;
-    margin-bottom: 0px;
+    margin-top: 0rem;
+    margin-bottom: 0rem;
     text-align: center;
     
     @include media($tablet-l){
-        margin-top: 30px;
-        margin-bottom: 100px;
+        margin-top: 3rem;
+        margin-bottom: 10rem;
     }
     
     @include media($desktop){
         width: 60%;
-        margin-top: 60px;
-        margin-bottom: 200px;
-    }
-}
-
-
-.button-menu{
-    display: flex;
-    flex: 1;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    color: $menu;
-
-    > .img{
-        width: 25px;
-        margin-bottom: 5px;
-        transition: all ease 0.5s;
-
-        @include media($tablet-l){
-            width: 35px;            
-        }
-        
-        
-        @include media($desktop){
-            width: 40px;            
-            margin-bottom: 10px;
-        }
+        margin-top: 6rem;
+        margin-bottom: 20rem;
     }
 
-    > .txt{
+    > .btn{
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
         color: $menu;
-        transition: all ease 0.5s;
-        font-size: 16px;
-
-        @include media($tablet-l){
+    
+        > .img{
+            width: 2.5rem;
+            margin-bottom: 0.5rem;
+            transition: all ease 0.5s;
+    
+            @include media($tablet-l){
+                width: 3.5rem;            
+            }
+            
+            
+            @include media($desktop){
+                width: 4rem;            
+                margin-bottom: 1rem;
+            }
         }
-    }
-}
-
-.button-menu.--select{
-    > .img path{
-        fill: $primary;
-        transition: all ease 0.5s;
-    }
-
-    > .txt{
-        color: $primary;
-        transition: all ease 0.5s;
-    }
-
+    
+        > .txt{
+            color: $menu;
+            transition: all ease 0.5s;
+            font-size: 1.6rem;
+    
+            @include media($tablet-l){
+            }
+        }
+    
+        &.--select{
+            > .img path{
+                fill: $primary;
+                transition: all ease 0.5s;
+            }
+        
+            > .txt{
+                color: $primary;
+                transition: all ease 0.5s;
+            }
+        }
+    }    
 }
