@@ -41,7 +41,6 @@ gulp.task("sass", function() {
 
 //JS  
 gulp.task('js', function(){
-    // return gulp.src(['!app/js/skillbar.js','app/js/*.js'])
     return gulp.src('app/js/*.js')
     .pipe(babel({presets:["es2015"]}))
     .pipe(uglify())
