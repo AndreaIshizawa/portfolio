@@ -12,10 +12,6 @@
         box-shadow: 9px 31px 90px -6rem #000;
         border-radius: 50%;
         width: 70%;
-        
-        @include media($desktop){
-            width: 100%;
-        }
     }
 
     > .name{
