@@ -5,6 +5,7 @@ var gulp = require("gulp"),
     cssmin = require('gulp-cssmin'),
     autoprefixer = require('gulp-autoprefixer'),
     uglify = require('gulp-uglify'),
+    babel = require("gulp-babel"),
     imagemin = require('gulp-imagemin'),
     runSequence = require("run-sequence"),
     browserSync = require('browser-sync').create()
@@ -40,8 +41,10 @@ gulp.task("sass", function() {
 
 //JS  
 gulp.task('js', function(){
+    // return gulp.src(['!app/js/skillbar.js','app/js/*.js'])
     return gulp.src('app/js/*.js')
-    .pipe(uglify())
+    // .pipe(babel({presets:["es2015"]}))
+    // .pipe(uglify())
     .pipe(gulp.dest('dist/js'));
 });
 
