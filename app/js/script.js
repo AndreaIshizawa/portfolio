@@ -1,55 +1,55 @@
-//manu tabs
-var menu = {
-	btn: document.querySelectorAll('.btn'),
-	home: document.querySelector('#page-home'),
-	cv: document.querySelector('#page-cv'),
-	work: document.querySelector('#page-work')
-};
-menu.cv.style.display = 'none';
-menu.work.style.display = 'none';
+//variaveis estao no arquivo skillbar.js
 
-menu.btn.forEach(function(e){
-	e.addEventListener('click', function(){
-
-		console.log(e);
-		if(e.getAttribute('id') == "home"){			
-			menu.home.style.display = 'flex';
-			menu.cv.style.display = 'none';
-			menu.work.style.display = 'none';
-			e.classList.add('--select');
-		}
-
-		else if(e.getAttribute('id') == "cv"){
-			menu.home.style.display = 'none';
-			menu.cv.style.display = 'flex';
-			menu.work.style.display = 'none';
-			e.classList.add('--select');
-			
-		} else {
-			menu.home.style.display = 'none';
-			menu.cv.style.display = 'none';
-			menu.work.style.display = 'flex';
-			e.classList.add('--select');
-		}
-
-	});
-});
-
-
-//hover
-var btn = document.querySelectorAll('[data-hover="hover"]');
+//select page
 (function(){
-	btn.forEach(function(event){
-		
-		event.addEventListener("mouseenter", function(event){
-			(this).classList.add('--select');
-		});
 
-		event.addEventListener("mouseleave", function(){
-			(this).classList.remove('--select');
+	page.cv.style.display = 'none';
+	page.work.style.display = 'none';
+
+	menu.btn.forEach(function(e){
+		e.addEventListener('click', function(){
+			if(menu.home.getAttribute('id') == e.getAttribute('id')){
+				removeClass();
+				displayNone();
+				addClass(menu.home);
+				displayFlex(page.home);
+			} 
+
+			else if(menu.cv.getAttribute('id') == e.getAttribute('id')){
+				removeClass();
+				displayNone();
+				addClass(menu.cv);
+				displayFlex(page.cv);
+			} 
+
+			else if(menu.work.getAttribute('id') == e.getAttribute('id')){
+				removeClass();
+				displayNone();
+				addClass(menu.work);
+				displayFlex(page.work);
+			} 
 		});
-		
 	});
+
 })();
 
+function removeClass(){
+	menu.btn.forEach(function(e){
+		e.classList.remove('--select');
+	});	
+}
+
+function addClass(e){
+	e.classList.add('--select');
+}
+
+function displayFlex(e){
+	e.style.display = 'flex';
+}
+
+function displayNone(){
+	page.home.style.display = 'none';
+	page.cv.style.display = 'none';
+	page.work.style.display = 'none';
+}
 

@@ -1,4 +1,8 @@
-html { font-size: 62.5%; }
+html { 
+    font-size: 62.5%; 
+    overflow: -moz-scrollbars-vertical; 
+    overflow-y: scroll;
+}
 
 body{
     font-family: 'Prompt', sans-serif;

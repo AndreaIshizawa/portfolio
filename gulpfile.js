@@ -43,8 +43,8 @@ gulp.task("sass", function() {
 gulp.task('js', function(){
     // return gulp.src(['!app/js/skillbar.js','app/js/*.js'])
     return gulp.src('app/js/*.js')
-    // .pipe(babel({presets:["es2015"]}))
-    // .pipe(uglify())
+    .pipe(babel({presets:["es2015"]}))
+    .pipe(uglify())
     .pipe(gulp.dest('dist/js'));
 });
 

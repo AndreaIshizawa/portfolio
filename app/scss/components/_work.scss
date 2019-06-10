@@ -32,13 +32,13 @@
             opacity: 0.6;
             box-sizing: border-box;
         }
-    }
-
-    .box.--select{
-        > .img{
-            box-shadow: 0 0rem 3rem -2rem #000;
-            opacity: 1;
-            transition: all ease 0.5s;
+        &:hover{
+            > .img{
+                box-shadow: 0 0rem 3rem -2rem #000;
+                opacity: 1;
+                transition: all ease 0.5s;
+            }
         }
     }
+
 }
