@@ -4,11 +4,12 @@
     justify-content: space-evenly;
     flex-flow: column;
     width: 100%;
-    margin: auto;
+    margin-bottom: 3rem;
+    
     
     @include media($desktop){
         flex-flow: row;
-        width: 70%;
+        margin-bottom: 0rem;
     }
 
     .info{

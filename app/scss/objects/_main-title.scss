@@ -4,9 +4,28 @@
     text-align: left;
     font-weight: 500;
     color: $primary;
+    line-height: 4rem;
     
     @include media($desktop){
         text-align: center;
         font-size: 5.2rem;
+    }
+
+    &.--mobile{
+        display: block;
+    }
+
+    &.--desktop{
+        display: none;
+    }
+
+    @include media($tablet-p){
+        &.--mobile{
+            display: none;
+        }
+    
+        &.--desktop{
+            display: block;
+        }
     }
 }

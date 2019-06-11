@@ -13,6 +13,7 @@
         justify-content: center;
         width: 100%;
         height: 8rem;
+        padding: 1.5rem 0;
         background-color: lighten($black, 65%);
         box-shadow: 0rem -2rem 5rem 0 black;
         z-index: 10;
@@ -38,6 +39,7 @@
             margin-left: 28%;
             padding:1.5rem 5rem;
         }
+        
     }
 
     &.--bg{
@@ -59,4 +61,27 @@
             background-position: initial;
         }
     }
+
+    &.--order{
+        @include media($tablet-l){
+            > .contact{ 
+                order: 1;
+            }
+            > .main-title{ 
+                order: 2;
+            }
+            > .cv{ 
+                order: 3;
+            }
+        }
+    }
+
+    &.--d-flex{
+        display: flex;
+    }
+    
+    &.--d-none{
+        display: none;
+    }
+    
 }

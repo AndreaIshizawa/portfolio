@@ -1,0 +1,10 @@
+.about{
+    > .highlight{
+        font-weight: 500;
+        color: $primary;
+        
+        @include media($tablet-p){
+            color: $black;
+        }
+    }
+}
