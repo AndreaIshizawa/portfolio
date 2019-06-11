@@ -4,7 +4,9 @@ var gulp = require("gulp"),
     sass = require('gulp-sass')
     cssmin = require('gulp-cssmin'),
     autoprefixer = require('gulp-autoprefixer'),
+    concat = require('gulp-concat'),
     uglify = require('gulp-uglify'),
+    saveLicense = require('uglify-save-license'),
     babel = require("gulp-babel"),
     imagemin = require('gulp-imagemin'),
     runSequence = require("run-sequence"),
@@ -31,7 +33,7 @@ gulp.task("html", function() {
 // SASS
 gulp.task("sass", function() {
     return gulp
-      .src(["app/scss/main.scss"])
+      .src("app/scss/main.scss")
       .pipe(sass().on('error', sass.logError))
       .pipe(autoprefixer(["last 15 versions", "> 1%", "ie 8", "ie 7"], { cascade: true }))
       .pipe(cssmin())
@@ -41,10 +43,28 @@ gulp.task("sass", function() {
 
 //JS  
 gulp.task('js', function(){
-    return gulp.src('app/js/*.js')
+    return gulp.src([
+      'app/js/plugins/typed-text.js',
+      'app/js/plugins/particles.js',
+      'app/js/plugins/particles-active.js',   
+      'app/js/plugins/progressbar.js',
+      'app/js/skillbar.js',
+      'app/js/menu-controller.js',
+    ])
     .pipe(babel({presets:["es2015"]}))
+    .pipe(concat('script.min.js'))
     .pipe(uglify())
     .pipe(gulp.dest('dist/js'));
+});
+
+gulp.task('js-min', function(){
+
+  return gulp.src([
+    'app/js/plugins/typed.js',
+    'app/js/plugins/typed-text.js'
+  ])
+  .pipe(gulp.dest('dist/js'));
+  
 });
 
 
@@ -79,6 +99,7 @@ gulp.task("build", function() {
       "html",
       "sass",
       "js",
+      "js-min",
       "img",
       "server"
     );

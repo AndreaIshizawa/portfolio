@@ -22,14 +22,15 @@
     "gulp-autoprefixer": "^6.1.0",
     "gulp-babel": "^7.0.1",
     "gulp-clean": "^0.4.0",
+    "gulp-concat": "^2.6.0",
     "gulp-cssmin": "^0.2.0",
     "gulp-htmlmin": "^4.0.0",
     "gulp-imagemin": "^6.0.0",
     "gulp-sass": "^4.0.2",
     "gulp-uglify": "^3.0.0",
-    "run-sequence": "^2.2.1"
+    "run-sequence": "^2.2.1",
+    "uglify-js": "^3.6.0",
+    "uglify-save-license": "^0.4.1"
   },
-  "dependencies": {
-    "progressbar.js": "^1.0.1"
-  }
+  "dependencies": {}
 }
