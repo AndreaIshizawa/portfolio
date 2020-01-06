@@ -8,7 +8,6 @@ var gulp = require("gulp"),
     uglify = require('gulp-uglify'),
     babel = require("gulp-babel"),
     imagemin = require('gulp-imagemin'),
-    runSequence = require("run-sequence"),
     browserSync = require('browser-sync').create()
     ;
 
@@ -80,26 +79,24 @@ gulp.task("server", function() {
   browserSync.init({server: {baseDir: "dist",index:"index.html"}});
   
   gulp.watch("app/**/*").on("change", browserSync.reload);
-  gulp.watch("app/*.html", ["html"]);
-  gulp.watch("app/scss/**/*.scss", ["sass"]);
-  gulp.watch("app/js/**/*.js", ["js"]);
-  gulp.watch("app/img/**/*.*", ["img"]);
+  gulp.watch("app/*.html", gulp.series(["html"]));
+  gulp.watch("app/scss/**/*.scss", gulp.series(["sass"]));
+  gulp.watch("app/js/**/*.js", gulp.series(["js"]));
+  gulp.watch("app/img/**/*.*", gulp.series(["img"]));
 });
 
 
 // WATCH
 gulp.task("watch", function() {
-    gulp.watch("app/*.html", ["html"])
+    gulp.watch("app/*.html", gulp.series(["html"]))
 });
   
-gulp.task("build", function() {
-    runSequence(
-      "clean",
-      "html",
-      "sass",
-      "js",
-      "js-min",
-      "img",
-      "server"
-    );
-  });
+gulp.task("build", gulp.series(
+  "clean",
+  "html",
+  "sass",
+  "js",
+  "js-min",
+  "img",
+  "server"
+), done => done());
