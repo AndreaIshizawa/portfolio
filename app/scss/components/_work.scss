@@ -2,36 +2,51 @@
     display: flex;
     justify-content: space-evenly;
     margin-top: 0;
-    flex-direction: column;
     flex-wrap: wrap;
     
     @include media($tablet-l){
         flex-direction: row;
         margin-top: 5rem;
     }
+
+    > a { 
+        display: inline-block; 
+        margin-bottom: 6rem;
+        flex-basis: 100%;
+
+        @include media($tablet-p) {
+            flex-basis: 50%;
+            padding: 15px;
+            margin-bottom: 0;
+            box-sizing: border-box;
+        }
+        @include media($desktop) {
+            flex-basis: calc(100%/3);
+            padding: 2.5rem;
+        }
+        
+        @include media($desktop-fullhd) {
+            padding: 4rem;
+
+        }
+    }
         
     .box{
-        width: 90%;
         margin: auto;
-        margin-bottom: 6rem;
         text-align: center;
-        
-        @include media($tablet-l){
-            margin-bottom: 0;
-        }
-
-        @include media($desktop){
-            width: 100%;
-        }
 
         > .img{
             width: 100%;
-            border: 1.5rem solid #fff;
+            border: 1rem solid #fff;
             box-shadow: 0 1rem 3rem -3rem #000;
             transition: all ease 0.5s;
             border-radius: 3px;
             opacity: 0.6;
             box-sizing: border-box;
+
+            @include media($desktop-fullhd){
+                border: 1.5rem;
+            }
         }
         &:hover{
             > .img{

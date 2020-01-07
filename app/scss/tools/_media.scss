@@ -2,6 +2,7 @@ $mobile: '(min-width:48rem)';
 $tablet-p: '(min-width: 768px)';
 $tablet-l: '(min-width: 992px)';
 $desktop: '(min-width: 1200px)';
+$desktop-fullhd: '(min-width: 1400px)';
 
 @mixin media ($media) {
     @media all and #{$media}{
